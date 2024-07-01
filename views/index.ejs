@@ -12,8 +12,13 @@
       <div class="message">
         <div class="message-user"><%= msg.user %>:</div>
         <div class="message-text"><%= msg.text %></div>
-        <div class="message-date"><%= msg.added %></div>
+        <div class="message-date"><%= msg.added.toLocaleString() %></div>
       </div>
     <% }); %>
+    <form action="/" method="POST">
+      <input type="text" name="messageUser" placeholder="username" required>
+      <input type="text" name="messageText" placeholder="text" required>
+      <button type="submit">Send</button>
+    </form>
   </body>
 </html>
