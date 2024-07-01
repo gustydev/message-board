@@ -6,3 +6,11 @@ body {
 a {
   color: #00B7FF;
 }
+
+.message-user {
+  font-weight: bold;
+}
+
+.message {
+  margin-bottom: 16px;
+}
