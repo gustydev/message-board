@@ -1,10 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 const messages = [
   {
     text: "Hi there!",
-    user: "Amando",
+    user: "Armando",
     added: new Date()
   },
   {
@@ -21,7 +21,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
   console.log(req.body)
-  messages.push({
+  messages.unshift({
     text: req.body.messageText,
     user: req.body.messageUser,
     added: new Date()

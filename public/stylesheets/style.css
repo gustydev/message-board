@@ -1,6 +1,15 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-size: 115%;
+}
+
+h1, p {
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -13,4 +22,18 @@ a {
 
 .message {
   margin-bottom: 16px;
+}
+
+.messages {
+  border: 2px solid gray;
+  padding: 16px;
+  width: 25%;
+  max-height: 75vh;
+  overflow-y:scroll;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+form {
+  padding: 16px;
 }
