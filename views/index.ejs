@@ -17,9 +17,19 @@
       <% }); %>
     </div>
     <form action="/" method="POST">
-      <input type="text" name="messageUser" placeholder="username" required>
-      <input type="text" name="messageText" placeholder="text" required>
+      <input type="text" name="user" placeholder="username" required>
+      <input type="text" name="text" placeholder="text" required>
       <button type="submit">Send</button>
     </form>
+    <% if (locals.errors) { %>
+      <div class="error">
+        <p style="font-weight: bold;">Input error:</p>
+        <ul>
+          <% errors.array().forEach((error) => { %>
+            <li><%= error.msg %></li>
+          <% }) %>
+        </ul>
+      </div>
+    <% } %>
   </body>
 </html>
